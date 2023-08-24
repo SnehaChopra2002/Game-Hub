@@ -16,7 +16,7 @@ function App() {
       </GridItem>
 
       <Show above="lg">
-        <GridItem area="filter" bg={"pink.700"}>
+        <GridItem area="filter">
           Filter
         </GridItem>
       </Show>
