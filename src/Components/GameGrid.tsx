@@ -14,14 +14,14 @@ import GameCardContainer from "./GameCardContainer";
 // }
 
 const GameGrid = () => {
-    const {games,error,isLoading} = useGames();
+    const {data,error,isLoading} = useGames();
     const skeletons = [1,2,3,4,5,6];
-//   const [games, setGames] = useState<Game[]>([]);
+//   const [data, setGames] = useState<Game[]>([]);
 //   const [error, setError] = useState("");
 
 //   useEffect(() => {
 //     apiClients
-//       .get<fetchedGamesApi>("/games")
+//       .get<fetchedGamesApi>("/data")
 //       .then((res) => setGames(res.data.results))
 //       .catch((err) => setError(err.message));
 //   });
@@ -29,7 +29,7 @@ const GameGrid = () => {
     <>
       {error && <Text>{error}</Text>}
       {/* <ul>
-        {games.map((game) => (
+        {data.map((game) => (
           <li key={game.id}>{game.name}</li>
         ))}
       </ul> */}
@@ -39,7 +39,7 @@ const GameGrid = () => {
             <GameCardSkeleton />
           </GameCardContainer>
         ))}
-        {games.map(game=>(
+        {data.map(game=>(
           <GameCardContainer>
             <GameCard game={game} />
           </GameCardContainer>
