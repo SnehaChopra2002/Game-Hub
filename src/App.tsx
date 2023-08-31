@@ -11,13 +11,18 @@ function App() {
         base: `"navbar" "body"`,
         lg: `"navbar navbar" "filter body"`,
       }}
+
+      templateColumns={{
+        base:'1fr',
+        lg:'0.2fr 1fr'
+      }}
     >
       <GridItem area="navbar">
         <Navbar />
       </GridItem>
 
       <Show above="lg">
-        <GridItem area="filter">
+        <GridItem area="filter" paddingX={5}>
           <GenreList />
         </GridItem>
       </Show>
