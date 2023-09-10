@@ -40,7 +40,7 @@ const GameGrid = ({gameQuery}:Props) => {
           <li key={game.id}>{game.name}</li>
         ))}
       </ul> */}
-      <SimpleGrid columns={{sm:1, md:2, lg:3, xl:5 }} padding='10px' spacing={4}>
+      <SimpleGrid columns={{sm:1, md:2, lg:3, xl:3 }} padding='10px' spacing={4}>
         {isLoading && skeletons.map(skeleton=>(
           <GameCardContainer key={skeleton}>
             <GameCardSkeleton />
