@@ -32,9 +32,10 @@ const GameGrid = ({gameQuery}:Props) => {
 //       .then((res) => setGames(res.data.results))
 //       .catch((err) => setError(err.message));
 //   });
+  if(error) return <Text>{error}</Text>
   return (
     <>
-      {error && <Text>{error}</Text>}
+      
       {/* <ul>
         {data.map((game) => (
           <li key={game.id}>{game.name}</li>
